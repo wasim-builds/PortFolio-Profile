@@ -1,0 +1,176 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.45in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2}\\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+  {\Huge \scshape Mohammed Wasim Khan} \\ \vspace{1pt}
+  Visakhapatnam, Andhra Pradesh, India \\ \vspace{1pt}
+  \small +91-9640011405 ~
+  \href{mailto:wasim143mr@gmail.com}{wasim143mr@gmail.com} ~
+  \href{https://linkedin.com/in/mohammed-wasim-khan-757595245}{LinkedIn} ~
+  \href{https://github.com/wasim-builds}{GitHub}
+  \vspace{-8pt}
+\end{center}
+
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+Data Analyst with strong expertise in Python, SQL, statistical modeling, and machine learning. Experienced in building end-to-end data pipelines, performing exploratory data analysis (EDA), and delivering actionable business insights through data visualization and predictive modeling. Proficient in Pandas, NumPy, Scikit-learn, and database optimization across PostgreSQL and MySQL. Demonstrated ability to process large datasets (15,000+ records), reduce query response times by 72\%, and improve operational efficiency through data-driven decision making.
+
+%----------TECHNICAL SKILLS----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Data Analysis}{: Python, Pandas, NumPy, Exploratory Data Analysis (EDA), Statistical Analysis, Hypothesis Testing} \\
+    \textbf{Machine Learning}{: Scikit-learn, TensorFlow, Regression, Classification, Clustering, SVM, Random Forest, Naive Bayes} \\
+    \textbf{NLP \& Text Analytics}{: NLTK, TF-IDF, Tokenization, Stemming, N-gram Models, Sentiment Analysis} \\
+    \textbf{Data Visualization}{: Matplotlib, Seaborn, Jupyter Notebooks, Dashboard Reporting} \\
+    \textbf{Databases \& SQL}{: PostgreSQL, MySQL, SQLite, MongoDB, Query Optimization, Indexing, ETL Pipelines} \\
+    \textbf{Tools \& Platforms}{: Git, Docker, AWS, Linux, CI/CD, Excel, Postman} \\
+    \textbf{Languages}{: Python, SQL, JavaScript, TypeScript, Java, Bash} \\
+    \textbf{Core CS}{: Data Structures, DBMS, Statistics, OOP, Agile Methodologies}
+  }}
+\end{itemize}
+\vspace{-16pt}
+
+%----------EDUCATION----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{VIT-AP University, Amaravathi}{Nov 2021 -- Present}
+{Integrated M-Tech in Software Engineering (Computer Science)}{CGPA: 8.33/10}
+\resumeSubheading
+{Narayana Junior College, Vizag}{May 2018 -- July 2020}
+{Intermediate (MPC)}{CGPA: 8.88/10}
+\resumeSubHeadingListEnd
+
+%----------WORK EXPERIENCE----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Software Development Instructor Intern}{Apr 2026 -- Present}
+{NxtWave Disruptive Technologies}{Hyderabad, IN (Hybrid)}
+\resumeItemListStart
+\resumeItem{Analyzed student performance data and learning patterns to identify knowledge gaps, iterating on instructional content for improved outcomes across 50+ learners.}
+\resumeItem{Delivered structured technical instruction on frontend development, translating complex data-backed insights into actionable learning modules.}
+\resumeItem{Maintained documentation and progress tracking systems, applying data organization skills to monitor learner engagement and course effectiveness.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software \& Data Engineering Intern}{Jul 2024}
+{Rashtriya Ispat Nigam Limited (Vizag Steel Plant)}{Visakhapatnam, IN}
+\resumeItemListStart
+\resumeItem{Designed and implemented scalable ETL pipelines processing 5,000+ daily healthcare transactions, ensuring data integrity and reducing patient wait times by 20\%.}
+\resumeItem{Performed SQL query optimization on PostgreSQL and MySQL databases, reducing average query response time from 850ms to 240ms (72\% improvement) through execution plan analysis, indexing, and query restructuring.}
+\resumeItem{Built automated data workflows that eliminated 30\% of manual data entry errors, significantly improving downstream data quality for operational analytics and reporting.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%----------PROJECTS----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Spam Email Detection System} $|$ \emph{Python, Scikit-learn, NLP, NLTK, TF-IDF, Pandas}}{Mar 2025}
+\resumeItemListStart
+\resumeItem{Engineered a full ML classification pipeline from raw data through EDA, preprocessing (tokenization, stemming, TF-IDF vectorization), model training, and evaluation on a 15,000+ sample dataset.}
+\resumeItem{Benchmarked Multinomial Naive Bayes, SVM, and Random Forest with hyperparameter tuning; achieved 96\% precision and 0.95 F1-score with minimized false positive rate — critical for business-grade classification.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Text-Based Emotion Classifier} $|$ \emph{Python, NLP, SVM, ANN, N-grams, Pandas}}{Jun 2024}
+\resumeItemListStart
+\resumeItem{Performed EDA and feature engineering on multilingual and Indian language text datasets, applying N-gram models and advanced NLP techniques to improve classification signal quality.}
+\resumeItem{Implemented and compared Naive Bayes, SVM, and ANN models, achieving statistically significant improvements in retrieval accuracy for localized text data through iterative model evaluation.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Smart Attendance System} $|$ \emph{Python, OpenCV, CNN, MySQL, SQLite, Data Logging}}{Aug 2024}
+\resumeItemListStart
+\resumeItem{Built a data collection and logging system processing 300+ daily facial recognition scans, storing structured attendance records in MySQL and SQLite for real-time querying and reporting.}
+\resumeItem{Achieved 98\% detection accuracy across 500+ student profiles; reduced manual data processing time by 90\% through automated pipeline design — a measurable efficiency gain with direct business impact.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{AI Interview Preparation Bot} $|$ \emph{Python, RAG, NLP, Azure OpenAI, MongoDB}}{Jan 2026}
+\resumeItemListStart
+\resumeItem{Designed a data ingestion pipeline parsing unstructured PDF resumes into structured vector embeddings, enabling context-aware retrieval and personalized Q\&A generation using RAG architecture.}
+\resumeItem{Reduced candidate interview preparation time by 40\% through data-driven feedback loops and targeted insight delivery from processed resume and job description datasets.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%----------CERTIFICATIONS----------
+\section{Certifications \& Achievements}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Gemini Certified University Student} $|$ \emph{Google}}{Dec 2025}
+\resumeProjectHeading
+{\textbf{Object Oriented Programming - Basics to Advanced} $|$ \emph{Udemy}}{Nov 2023}
+\resumeProjectHeading
+{\textbf{University Chess Player} $|$ \emph{Analytical thinking and strategic data-driven decision making}}{}
+\resumeSubHeadingListEnd
+
+\end{document}

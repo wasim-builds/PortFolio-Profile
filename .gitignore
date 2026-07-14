@@ -1,5 +1,4 @@
-# Ignore entire assets folder (personal images and details)
-assets/
+# Do not ignore assets folder anymore because the site needs the resume to be downloadable
 
 # Ignore system files
 .DS_Store
