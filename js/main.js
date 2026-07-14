@@ -2,86 +2,49 @@ import projects from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Dynamic Project Rendering (Redoyanul Haque Layout)
-    const projectsContainer = document.getElementById('projects-container');
+    // Render Projects into Sawad Bento Grid
+    const projectsContainer = document.getElementById('projects-bento-container');
     
     if (projectsContainer && projects) {
-        // Take top 6 projects for the premium showcase to avoid clutter
+        // Show top 6 projects
         const topProjects = projects.slice(0, 6);
         
-        topProjects.forEach((project, index) => {
-            const num = (index + 1).toString().padStart(2, '0');
-            const toolsString = project.tech.join(', ');
+        topProjects.forEach((project) => {
+            const techString = project.tech.join(' • ');
             
             const cardHTML = `
-                <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-item fade-in">
-                    <div class="project-content">
-                        <div class="project-num">${num}</div>
-                        <h3 class="project-title">${project.title}</h3>
-                        <div class="project-category">${project.tech[0]} / Engineering</div>
-                        
-                        <div class="project-tools-heading">Tools and features</div>
-                        <div class="project-tools">${toolsString}</div>
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="bento-card project-card col-span-1">
+                    <div>
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3 class="project-title">${project.title.replace(/-/g, ' ')}</h3>
                     </div>
-                    <div class="project-image-wrapper">
-                        <!-- We use an abstract gradient/placeholder that fits the dark theme since specific project images aren't available -->
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(20,15,25,1) 0%, rgba(194,164,255,0.1) 100%);"></div>
-                    </div>
+                    <p class="project-tech">${techString}</p>
                 </a>
             `;
-            
             projectsContainer.insertAdjacentHTML('beforeend', cardHTML);
         });
     }
 
-    // 2. Loading Screen Logic (Redoyanul Theme)
-    const loadingScreen = document.getElementById('loading-screen');
-    const enterBtn = document.getElementById('enter-btn');
-    const loadingWrap = document.querySelector('.loading-wrap');
-    const loadingHover = document.querySelector('.loading-hover');
+    // Floating Nav Active State Scroll Logic
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = ['home', 'projects', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
 
-    if (loadingScreen && enterBtn && loadingWrap && loadingHover) {
-        // Hover tracking
-        loadingWrap.addEventListener('mousemove', (e) => {
-            const rect = loadingWrap.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            loadingHover.style.left = `${x - 125}px`;
-            loadingHover.style.top = `${y - 60}px`;
-        });
-
-        // Click to enter
-        enterBtn.addEventListener('click', () => {
-            loadingWrap.classList.add('loading-clicked');
-            loadingScreen.classList.add('loading-clicked');
-            
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 1000); 
-        });
-    }
-
-    // 3. Scroll Reveal Animations (Intersection Observer)
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 200) {
+                current = section.getAttribute('id');
             }
         });
-    }, observerOptions);
 
-    document.querySelectorAll('.fade-in, .tech-box, .hero-content').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-        observer.observe(el);
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
     });
 });

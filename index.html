@@ -4,139 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Wasim Khan | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Sawad Framer Fonts (Satoshi & Inter) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body id="home">
     
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loading-screen">
-        <div class="loading-wrap">
-            <button class="loading-button" id="enter-btn">ENTER PORTFOLIO</button>
-            <div class="loading-hover"></div>
+    <!-- Sawad-style Floating Navbar -->
+    <nav class="floating-nav">
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+
+    <!-- Bento Grid Container -->
+    <main class="container">
+        <div class="bento-grid">
+            
+            <!-- Hero Bento Card (Large) -->
+            <div class="bento-card hero-card col-span-2 row-span-2">
+                <p class="tagline">Hello, I'm</p>
+                <h1 class="hero-title">Mohammed Wasim Khan</h1>
+                <p class="hero-desc">An AI Engineer & Full-Stack Developer designing intelligent, high-performance systems and sleek digital experiences.</p>
+                <a href="#contact" class="btn-primary">Let's talk <span class="arrow">↗</span></a>
+            </div>
+
+            <!-- Profile Image Bento Card -->
+            <div class="bento-card image-card col-span-1 row-span-2">
+                <div class="image-wrapper">
+                    <!-- Note: Local reference to the image that exists on disk -->
+                    <img src="./assets/profile.jpg" alt="Wasim Khan" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80';">
+                </div>
+            </div>
+
+            <!-- Experience / Stats Card -->
+            <div class="bento-card stat-card col-span-1 row-span-1">
+                <div class="stat-number">15+</div>
+                <div class="stat-text">Projects<br>Engineered</div>
+            </div>
+
+            <!-- Tech Stack Card -->
+            <div class="bento-card tech-card col-span-2 row-span-1">
+                <h3 class="card-title">My Toolkit</h3>
+                <div class="tech-marquee">
+                    <span>Python</span> • <span>React</span> • <span>Node.js</span> • <span>AWS</span> • <span>MongoDB</span> • <span>C++</span> • <span>TensorFlow</span> • <span>Go</span>
+                </div>
+            </div>
+
+            <!-- Projects Header -->
+            <div class="bento-card section-header col-span-3 row-span-1" id="projects">
+                <h2 class="section-title">Selected Works</h2>
+            </div>
+            
+            <!-- Projects Container (Injected by JS) -->
+            <div id="projects-bento-container" class="col-span-3 bento-grid-inner">
+                <!-- JS injects project bento cards here -->
+            </div>
+
+            <!-- Contact Card -->
+            <div class="bento-card contact-card col-span-3 row-span-1" id="contact">
+                <h2 class="contact-title">Let's build something great.</h2>
+                <a href="mailto:wasim143mr@gmail.com" class="email-link">wasim143mr@gmail.com</a>
+                <div class="contact-socials">
+                    <a href="https://github.com/wasim-builds" target="_blank">GitHub ↗</a>
+                    <a href="https://linkedin.com/in/mohammed-wasim-khan-757595245" target="_blank">LinkedIn ↗</a>
+                </div>
+            </div>
+            
         </div>
-    </div>
-
-    <!-- Background Grid -->
-    <div class="bg-glow"></div>
-    <div class="bg-grid"></div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">WK</div>
-        <div class="header-email">wasim143mr@gmail.com</div>
-        <nav class="nav-links">
-            <a href="#about">ABOUT</a>
-            <a href="#work">WORK</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
-    </header>
-
-    <!-- Sidebars -->
-    <aside class="social-sidebar">
-        <a href="https://github.com/wasim-builds" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-        <a href="https://linkedin.com/in/mohammed-wasim-khan-757595245" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M4 4l16 16m0-16L4 20"></path></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-    </aside>
-
-    <a href="#" class="floating-resume">RESUME <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="margin-left: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
-
-    <main class="main-content">
-        
-        <!-- Redoyanul Style 3D Hero -->
-        <section id="hero" class="hero-split section fade-in">
-            <div class="hero-left">
-                <p class="hero-greeting">Hello! I'm</p>
-                <h1 class="hero-name">MOHAMMED<br>WASIM<br>KHAN</h1>
-            </div>
-            
-            <div class="hero-center-image">
-                <img src="./assets/profile.jpg" alt="Wasim Avatar" class="hero-avatar">
-            </div>
-
-            <div class="hero-right">
-                <p class="hero-role-prefix">An</p>
-                <h1 class="hero-role">AI ENGINEER<br>FULL-STACK<br>DEV</h1>
-            </div>
-        </section>
-
-        <!-- Redoyanul Style About Section -->
-        <section id="about" class="about-section section fade-in">
-            <div class="about-left">
-                <img src="./assets/profile.jpg" alt="Wasim Avatar" class="about-avatar">
-            </div>
-            <div class="about-right">
-                <h2 class="about-title">ABOUT ME</h2>
-                <p class="about-text">
-                    I am a self-taught AI & Full-Stack Developer. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas.
-                </p>
-            </div>
-        </section>
-
-        <!-- Tech Stack -->
-        <section id="tech-stack" class="section tech-section fade-in">
-            <h2 class="section-heading centered">TECH STACK</h2>
-            <div class="tech-grid-wrapper">
-                <div class="tech-grid">
-                    <div class="tech-box"><span>Python</span></div>
-                    <div class="tech-box"><span>JavaScript</span></div>
-                    <div class="tech-box"><span>TypeScript</span></div>
-                    <div class="tech-box"><span>C++</span></div>
-                    <div class="tech-box"><span>React</span></div>
-                    <div class="tech-box"><span>Node.js</span></div>
-                    <div class="tech-box"><span>MongoDB</span></div>
-                    <div class="tech-box"><span>AWS</span></div>
-                    <div class="tech-box"><span>Docker</span></div>
-                    <div class="tech-box"><span>TensorFlow</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work -->
-        <section id="work" class="section work-section">
-            <h2 class="section-heading" style="text-align:center;">My Work</h2>
-            <div class="projects-container" id="projects-container">
-                <!-- Injected via JS -->
-            </div>
-        </section>
-
-        <!-- Redoyanul Style Footer/Contact -->
-        <footer id="contact" class="footer-section fade-in">
-            <div class="footer-cta">
-                <a href="#" class="btn-play">Play With Me &rarr;</a>
-                <a href="mailto:wasim143mr@gmail.com" class="btn-hire">Hire Me &rarr;</a>
-            </div>
-            
-            <h1 class="footer-name">MOHAMMED WASIM KHAN</h1>
-            
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Email</h4>
-                    <p>wasim143mr@gmail.com</p>
-                    <br>
-                    <h4>Location</h4>
-                    <p>India</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Social</h4>
-                    <a href="#">Github ↗</a>
-                    <a href="#">Linkedin ↗</a>
-                    <a href="#">Twitter ↗</a>
-                    <a href="#">Instagram ↗</a>
-                </div>
-                <div class="footer-col">
-                    <p>Designed and Developed<br>by Mohammed Wasim Khan</p>
-                    <br>
-                    <p>&copy; 2026</p>
-                </div>
-            </div>
-        </footer>
-        
     </main>
-
+    
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>
