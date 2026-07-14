@@ -274,38 +274,26 @@ a, button, input, select, textarea, .nav-icon {
     font-size: 1.2rem;
 }
 
-/* Horizontal Scroll Hijack Projects List */
-.projects-scroll-wrapper {
-    height: 300vh; /* Provides scrollable space */
-    position: relative;
-    width: 100%;
-}
-
-.projects-sticky {
-    position: sticky;
-    top: 100px;
-    height: calc(100vh - 150px);
-    display: flex;
-    align-items: center;
-    overflow: hidden; /* Hide the overflow, we translate it */
-    width: 100%;
-}
-
-.projects-h-container {
-    display: flex;
+/* Projects Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    width: max-content;
-    will-change: transform;
-    padding-right: 50px; /* extra space at end */
+    padding-bottom: 40px;
+}
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.project-h-card {
-    min-width: 450px;
-    flex-shrink: 0;
+.project-card {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255,255,255,0.1);
-    padding-right: 40px;
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255,255,255,0.05);
     gap: 25px;
     text-decoration: none;
     color: inherit;
@@ -316,12 +304,14 @@ a, button, input, select, textarea, .nav-icon {
 
 /* Stagger animation based on child index, applied in JS or general */
 @keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.project-h-card:hover {
-    background: rgba(255, 255, 255, 0.02);
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
 }
 
 .project-h-header {

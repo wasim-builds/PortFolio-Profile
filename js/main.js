@@ -2,11 +2,11 @@ import projects from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Render Projects into Horizontal List
+    // Render Projects into Grid Layout
     const projectsContainer = document.getElementById('projects-list');
     
     if (projectsContainer && projects) {
-        projectsContainer.className = 'projects-h-container';
+        projectsContainer.className = 'projects-grid';
         projectsContainer.innerHTML = '';
         
         projects.forEach((project, index) => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const num = String(index + 1).padStart(2, '0');
             
             const cardHTML = `
-                <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-h-card" style="animation-delay: ${index * 0.1}s">
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-card" style="animation-delay: ${index * 0.1}s">
                     <div class="project-h-header">
                         <h3 class="project-num">${num}</h3>
                         <div class="project-title-group">
@@ -33,37 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             projectsContainer.insertAdjacentHTML('beforeend', cardHTML);
         });
-
-        // Horizontal scroll hijack logic
-        const wrapper = document.getElementById('projects-scroll-wrapper');
-        const container = document.getElementById('projects-list');
-
-        function updateScroll() {
-            if (!wrapper || !container) return;
-            const rect = wrapper.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            
-            // Calculate progress of the sticky wrapper
-            let progress = 0;
-            if (rect.top <= 100) { // 100 is the sticky top offset
-                progress = Math.abs(rect.top - 100) / (rect.height - viewportHeight);
-            }
-            if (progress > 1) progress = 1;
-            if (progress < 0) progress = 0;
-            
-            // Max translate distance
-            const maxTranslate = container.scrollWidth - container.parentElement.clientWidth;
-            
-            if (maxTranslate > 0) {
-                container.style.transform = `translateX(-${progress * maxTranslate}px)`;
-            }
-        }
-
-        window.addEventListener('scroll', updateScroll);
-        window.addEventListener('resize', updateScroll);
-        
-        // Initial call
-        updateScroll();
     }
 
     // Custom Trailing Cursor Logic
