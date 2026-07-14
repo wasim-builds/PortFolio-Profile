@@ -1,8 +1,5 @@
-# Ignore private resume files and documents
-assets/*.pdf
-assets/*.tex
-assets/*.docx
-assets/*.doc
+# Ignore entire assets folder (personal images and details)
+assets/
 
 # Ignore system files
 .DS_Store
