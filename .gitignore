@@ -1,0 +1,9 @@
+# Ignore private resume files and documents
+assets/*.pdf
+assets/*.tex
+assets/*.docx
+assets/*.doc
+
+# Ignore system files
+.DS_Store
+Thumbs.db
