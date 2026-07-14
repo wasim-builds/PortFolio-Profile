@@ -438,54 +438,49 @@ a, button, input, select, textarea, .nav-icon {
     transform: translateY(0);
 }
 
-/* Contact Form */
-.contact-form {
+/* Contact Links */
+.contact-links {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.form-row {
+.contact-item {
     display: flex;
-    gap: 20px;
-}
-.input-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.input-group label {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-.contact-form input, .contact-form select, .contact-form textarea {
-    background: rgba(255,255,255,0.05);
+    align-items: center;
+    background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
-    padding: 18px;
+    border-radius: var(--radius-md);
+    padding: 25px 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+}
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-orange);
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+.contact-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
     color: #fff;
-    font-family: var(--font-body);
+    margin-bottom: 5px;
+}
+.contact-info p {
+    color: var(--text-secondary);
     font-size: 1rem;
-    outline: none;
-    transition: border 0.3s;
-}
-.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-    border-color: var(--accent-orange);
-}
-.btn-submit {
-    background: var(--accent-orange);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    padding: 18px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-}
-.btn-submit:hover {
-    background: #d6592a;
 }
 
 /* Responsive Design */
