@@ -25,4 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Custom Trailing Cursor Logic
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+    const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+    if (cursorDot && cursorOutline) {
+        window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Direct instant positioning for the dot
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Smooth trailing animation for the outline ball
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { 
+                duration: 500, 
+                fill: "forwards" 
+            });
+        });
+    }
+
 });
