@@ -151,6 +151,7 @@ a, button, input, select, textarea, .nav-icon {
 .content-area {
     flex-grow: 1;
     padding-bottom: 100px;
+    min-width: 0; /* Fixes flexbox overflow stretching bug */
 }
 
 /* Floating Top Nav */
@@ -273,17 +274,29 @@ a, button, input, select, textarea, .nav-icon {
     font-size: 1.2rem;
 }
 
-/* Horizontal Projects List */
+/* Horizontal Scroll Hijack Projects List */
+.projects-scroll-wrapper {
+    height: 300vh; /* Provides scrollable space */
+    position: relative;
+    width: 100%;
+}
+
+.projects-sticky {
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hide the overflow, we translate it */
+    width: 100%;
+}
+
 .projects-h-container {
     display: flex;
-    overflow-x: auto;
     gap: 40px;
-    padding-bottom: 40px;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-}
-.projects-h-container::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    width: max-content;
+    will-change: transform;
+    padding-right: 50px; /* extra space at end */
 }
 
 .project-h-card {

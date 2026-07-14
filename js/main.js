@@ -34,13 +34,36 @@ document.addEventListener('DOMContentLoaded', () => {
             projectsContainer.insertAdjacentHTML('beforeend', cardHTML);
         });
 
-        // Convert vertical scroll to horizontal scroll for this container
-        projectsContainer.addEventListener('wheel', (evt) => {
-            if (evt.deltaY !== 0) {
-                evt.preventDefault();
-                projectsContainer.scrollLeft += evt.deltaY * 2.5;
+        // Horizontal scroll hijack logic
+        const wrapper = document.getElementById('projects-scroll-wrapper');
+        const container = document.getElementById('projects-list');
+
+        function updateScroll() {
+            if (!wrapper || !container) return;
+            const rect = wrapper.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Calculate progress of the sticky wrapper
+            let progress = 0;
+            if (rect.top <= 100) { // 100 is the sticky top offset
+                progress = Math.abs(rect.top - 100) / (rect.height - viewportHeight);
             }
-        });
+            if (progress > 1) progress = 1;
+            if (progress < 0) progress = 0;
+            
+            // Max translate distance
+            const maxTranslate = container.scrollWidth - container.parentElement.clientWidth;
+            
+            if (maxTranslate > 0) {
+                container.style.transform = `translateX(-${progress * maxTranslate}px)`;
+            }
+        }
+
+        window.addEventListener('scroll', updateScroll);
+        window.addEventListener('resize', updateScroll);
+        
+        // Initial call
+        updateScroll();
     }
 
     // Custom Trailing Cursor Logic
