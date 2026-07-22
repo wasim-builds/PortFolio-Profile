@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Wasim Khan | Portfolio</title>
-    <!-- Sawad Framer Fonts -->
+    <title>Mohammed Wasim Khan | AI Engineer & Full-Stack Developer</title>
+    <meta name="description" content="AI Engineer & Full-Stack Developer. Active open-source contributor to Apple, AWS, Google, Microsoft, PyTorch, and more.">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -15,8 +15,13 @@
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
 
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-bar"></div>
+    </div>
+
     <div class="layout-wrapper">
-        
+
         <!-- Left Sidebar (Sticky) -->
         <aside class="sidebar">
             <div class="profile-card">
@@ -24,152 +29,158 @@
                     <img src="./project-images/profile.jpg" alt="Mohammed Wasim Khan" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80';">
                 </div>
                 <h1 class="profile-name">Mohammed<br>Wasim Khan</h1>
-                
-                <p class="profile-bio">An AI Engineer & Full-Stack Developer who has developed countless innovative solutions.</p>
-                
+                <div class="profile-role">
+                    <span class="role-badge">AI Engineer</span>
+                    <span class="role-badge role-badge--green">Full-Stack Dev</span>
+                </div>
+                <p class="profile-bio">Building intelligent systems at the intersection of AI, cloud, and full-stack engineering. Active contributor to Apple, AWS, Google, Microsoft & PyTorch.</p>
+
+                <div class="profile-quick-stats">
+                    <div class="quick-stat">
+                        <span class="quick-stat-num">25</span>
+                        <span class="quick-stat-label">Open Source PRs</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="quick-stat-num">16+</span>
+                        <span class="quick-stat-label">Projects Contributed</span>
+                    </div>
+                </div>
+
                 <div class="social-links">
-                    <a href="https://github.com/wasim-builds" target="_blank">
+                    <a href="https://github.com/wasim-builds" target="_blank" aria-label="GitHub">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
-                    <a href="https://linkedin.com/in/mohammed-wasim-khan-757595245" target="_blank">
+                    <a href="https://linkedin.com/in/mohammed-wasim-khan-757595245" target="_blank" aria-label="LinkedIn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="mailto:wasim143mr@gmail.com">
+                    <a href="mailto:wasim143mr@gmail.com" aria-label="Email">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     </a>
                 </div>
-                
-                <a href="./assets/wasim_ai_engineer.pdf" download="Mohammed_Wasim_Khan_Resume.pdf" class="btn-resume">Download Resume</a>
+
+                <a href="./assets/wasim_ai_engineer.pdf" download="Mohammed_Wasim_Khan_Resume.pdf" class="btn-resume">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download Resume
+                </a>
             </div>
         </aside>
 
         <!-- Right Content Area -->
         <main class="content-area">
-            
+
             <!-- Floating Navigation -->
-            <nav class="top-nav">
-                <a href="#home" class="nav-icon active"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a>
-                <a href="#projects" class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></a>
-                <a href="#experience" class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></a>
-                <a href="#tools" class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></a>
-                <a href="#contact" class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></a>
+            <nav class="top-nav" aria-label="Section navigation">
+                <a href="#home" class="nav-icon active" data-section="home" aria-label="Home">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </a>
+                <a href="#contributions" class="nav-icon" data-section="contributions" aria-label="Contributions">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+                </a>
+                <a href="#projects" class="nav-icon" data-section="projects" aria-label="Projects">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </a>
+                <a href="#skills" class="nav-icon" data-section="skills" aria-label="Skills">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </a>
+                <a href="#experience" class="nav-icon" data-section="experience" aria-label="Experience">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </a>
+                <a href="#contact" class="nav-icon" data-section="contact" aria-label="Contact">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                </a>
             </nav>
 
             <!-- Hero Section -->
             <section id="home" class="section-hero">
-                <h1 class="hero-text-solid">SOFTWARE</h1>
-                <h1 class="hero-text-faded">ENGINEER</h1>
-                
-                <p class="hero-subtext">Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted AI and Full-Stack products.</p>
-                
-                <div class="stats-row">
-                    <div class="stat"><span class="stat-num">+1</span> <span class="stat-lbl">YEAR OF<br>EXPERIENCE</span></div>
-                    <div class="stat"><span class="stat-num">+15</span> <span class="stat-lbl">PROJECTS<br>COMPLETED</span></div>
+                <div class="hero-greeting">Hello, I'm</div>
+                <h1 class="hero-text-solid">MOHAMMED WASIM</h1>
+                <h1 class="hero-text-faded">KHAN</h1>
+
+                <div class="hero-title-row">
+                    <span class="hero-title-badge">AI Engineer</span>
+                    <span class="hero-title-divider">/</span>
+                    <span class="hero-title-badge hero-title-badge--green">Full-Stack Developer</span>
+                    <span class="hero-title-divider">/</span>
+                    <span class="hero-title-badge hero-title-badge--blue">Open Source Contributor</span>
                 </div>
 
-                <!-- Removed hero cards as requested -->
+                <p class="hero-subtext">Building intelligent systems at the intersection of AI, cloud, and full-stack engineering. Active contributor to <strong>Apple Swift-NIO</strong>, <strong>AWS CDK</strong>, <strong>PyTorch</strong>, <strong>Google JAX</strong>, <strong>Microsoft AutoGen</strong>, and more.</p>
+
+                <div class="stats-row">
+                    <div class="stat" data-count="25">
+                        <span class="stat-num">25</span>
+                        <span class="stat-lbl">OPEN SOURCE<br>PULL REQUESTS</span>
+                    </div>
+                    <div class="stat" data-count="16">
+                        <span class="stat-num">16+</span>
+                        <span class="stat-lbl">MAJOR PROJECTS<br>CONTRIBUTED TO</span>
+                    </div>
+                    <div class="stat" data-count="68">
+                        <span class="stat-num">68</span>
+                        <span class="stat-lbl">PUBLIC<br>REPOSITORIES</span>
+                    </div>
+                    <div class="stat" data-count="1">
+                        <span class="stat-num">1+</span>
+                        <span class="stat-lbl">YEAR OF<br>EXPERIENCE</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-row">
+                    <a href="#contributions" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+                        View My Contributions
+                    </a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </section>
+
+            <!-- Open Source Contributions Section -->
+            <section id="contributions" class="section-contributions">
+                <h2 class="section-heading-solid">OPEN SOURCE</h2>
+                <h2 class="section-heading-faded">CONTRIBUTIONS</h2>
+
+                <p class="section-intro">Active contributor across 16+ major open-source projects including Apple, AWS, Google, Microsoft, Meta, and the AI/ML ecosystem.</p>
+
+                <div class="contributions-grid" id="contributions-list">
+                    <!-- JavaScript will inject contributions here -->
+                </div>
             </section>
 
             <!-- Projects Section -->
             <section id="projects" class="section-projects">
-                <h2 class="section-heading-solid">RECENT</h2>
+                <h2 class="section-heading-solid">FEATURED</h2>
                 <h2 class="section-heading-faded">PROJECTS</h2>
-                
+
+                <div class="project-filters" id="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="featured">Featured</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+
                 <div class="projects-grid" id="projects-list">
-                    <!-- JavaScript will inject all 11 projects here -->
+                    <!-- JavaScript will inject projects here -->
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section-skills">
+                <h2 class="section-heading-solid">TECHNICAL</h2>
+                <h2 class="section-heading-faded">SKILLS</h2>
+
+                <div class="skills-container" id="skills-list">
+                    <!-- JavaScript will inject skills here -->
                 </div>
             </section>
 
             <!-- Experience Section -->
             <section id="experience" class="section-experience">
-                <h2 class="section-heading-solid">1 YEAR OF</h2>
-                <h2 class="section-heading-faded">EXPERIENCE</h2>
-                
-                <div class="exp-list">
-                    <div class="exp-item">
-                        <h3>M.Tech (Integrated) in Software Engineering ↗</h3>
-                        <p>VIT-AP University. Completed integrated Master of Technology program with a focus on advanced software engineering, AI, and full-stack development.</p>
-                        <span class="exp-date">2019 - 2024</span>
-                    </div>
-                    <div class="exp-item">
-                        <h3>Software & Data Engineering Intern ↗</h3>
-                        <p>Rashtriya Ispat Nigam Limited (Vizag Steel Plant). Engineered a scalable data architecture and full-stack healthcare management system, ensuring data integrity for 5,000+ daily transactions.</p>
-                        <span class="exp-date">Jul 2024 - Present</span>
-                    </div>
-                    <div class="exp-item">
-                        <h3>AI / ML Researcher ↗</h3>
-                        <p>VIT-AP University. Researched and implemented advanced text classification techniques for multilingual datasets using Naive Bayes, SVM, and ANNs. Architected interview-aware AI platforms using Azure OpenAI.</p>
-                        <span class="exp-date">Nov 2021 - Present</span>
-                    </div>
-                </div>
-            </section>
+                <h2 class="section-heading-solid">EXPERIENCE</h2>
+                <h2 class="section-heading-faded">& EDUCATION</h2>
 
-            <!-- Premium Tools Section -->
-            <section id="tools" class="section-tools">
-                <h2 class="section-heading-solid">PREMIUM</h2>
-                <h2 class="section-heading-faded">TOOLS</h2>
-                
-                <div class="tools-grid-icons">
-                    <div class="tool-icon-box" title="Python">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                        <span class="tool-tooltip">Python</span>
-                    </div>
-                    <div class="tool-icon-box" title="JavaScript">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <span class="tool-tooltip">JavaScript</span>
-                    </div>
-                    <div class="tool-icon-box" title="TypeScript">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                        <span class="tool-tooltip">TypeScript</span>
-                    </div>
-                    <div class="tool-icon-box" title="React">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                        <span class="tool-tooltip">React</span>
-                    </div>
-                    <div class="tool-icon-box" title="Node.js">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-                        <span class="tool-tooltip">Node.js</span>
-                    </div>
-                    <div class="tool-icon-box" title="MongoDB">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-                        <span class="tool-tooltip">MongoDB</span>
-                    </div>
-                    <div class="tool-icon-box" title="PostgreSQL">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                        <span class="tool-tooltip">PostgreSQL</span>
-                    </div>
-                    <div class="tool-icon-box" title="Docker">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                        <span class="tool-tooltip">Docker</span>
-                    </div>
-                    <div class="tool-icon-box" title="Git">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                        <span class="tool-tooltip">Git</span>
-                    </div>
-                    <div class="tool-icon-box" title="Amazon Web Services">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
-                        <span class="tool-tooltip">AWS</span>
-                    </div>
-                    <div class="tool-icon-box" title="C++">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-                        <span class="tool-tooltip">C++</span>
-                    </div>
-                    <div class="tool-icon-box" title="Tailwind CSS">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
-                        <span class="tool-tooltip">Tailwind</span>
-                    </div>
-                    <div class="tool-icon-box" title="Linux">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
-                        <span class="tool-tooltip">Linux</span>
-                    </div>
-                    <div class="tool-icon-box" title="TensorFlow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
-                        <span class="tool-tooltip">TensorFlow</span>
-                    </div>
-                    <div class="tool-icon-box" title="Figma">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-                        <span class="tool-tooltip">Figma</span>
-                    </div>
+                <div class="exp-timeline" id="experience-list">
+                    <!-- JavaScript will inject experience here -->
                 </div>
             </section>
 
@@ -177,17 +188,10 @@
             <section id="contact" class="section-contact">
                 <h2 class="section-heading-solid">GET IN</h2>
                 <h2 class="section-heading-faded">TOUCH</h2>
-                
+
+                <p class="section-intro">Open to collaborations, open-source contributions, and exciting opportunities.</p>
+
                 <div class="contact-links">
-                    <a href="tel:+919640011405" class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        </div>
-                        <div class="contact-info">
-                            <h4>Phone</h4>
-                            <p>+91 9640011405</p>
-                        </div>
-                    </a>
                     <a href="mailto:wasim143mr@gmail.com" class="contact-item">
                         <div class="contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -196,6 +200,7 @@
                             <h4>Email</h4>
                             <p>wasim143mr@gmail.com</p>
                         </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                     </a>
                     <a href="https://linkedin.com/in/mohammed-wasim-khan-757595245" target="_blank" class="contact-item">
                         <div class="contact-icon">
@@ -205,12 +210,46 @@
                             <h4>LinkedIn</h4>
                             <p>Mohammed Wasim Khan</p>
                         </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </a>
+                    <a href="https://github.com/wasim-builds" target="_blank" class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>wasim-builds</p>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </a>
+                    <a href="tel:+919640011405" class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Phone</h4>
+                            <p>+91 9640011405</p>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                     </a>
                 </div>
             </section>
 
         </main>
     </div>
+
+    <!-- Mobile Navigation -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#contributions">Contributions</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <script type="module" src="./js/main.js"></script>
 </body>

@@ -1,5 +1,26 @@
-# Do not ignore assets folder anymore because the site needs the resume to be downloadable
+# Do not ignore assets folder — the site needs the resume to be downloadable
 
-# Ignore system files
+# OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
