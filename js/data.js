@@ -363,11 +363,11 @@ const skills = [
 
 const experience = [
     {
-        title: "M.Tech (Integrated) in Software Engineering",
-        org: "VIT-AP University",
-        description: "Completed integrated Master of Technology program with focus on advanced software engineering, AI, and full-stack development.",
-        date: "2019 — 2024",
-        type: "education"
+        title: "Software Development Instructor Intern",
+        org: "NxtWave Disruptive Technologies — Hyderabad, IN",
+        description: "Delivered structured frontend development instruction covering React, JavaScript, and modern web technologies. Reviewed and debugged student MERN stack projects daily, reinforcing best practices in component architecture, API integration, and MongoDB schema design.",
+        date: "Apr 2026 — Present",
+        type: "work"
     },
     {
         title: "Software & Data Engineering Intern",
@@ -375,6 +375,13 @@ const experience = [
         description: "Engineered scalable data architecture and full-stack healthcare management system. Ensured data integrity for 5,000+ daily transactions.",
         date: "Jul 2024 — Present",
         type: "work"
+    },
+    {
+        title: "M.Tech (Integrated) in Software Engineering",
+        org: "VIT-AP University",
+        description: "Completed integrated Master of Technology program with focus on advanced software engineering, AI, and full-stack development.",
+        date: "2019 — 2024",
+        type: "education"
     },
     {
         title: "AI / ML Researcher",
